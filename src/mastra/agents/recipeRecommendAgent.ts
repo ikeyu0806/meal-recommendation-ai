@@ -2,7 +2,7 @@ import { openai } from '@ai-sdk/openai'
 import { Agent } from '@mastra/core/agent'
 import { Memory } from '@mastra/memory'
 import { LibSQLStore } from '@mastra/libsql'
-import { recipeFromFileTool } from '../tools/recipeFromFileTool'
+import { recipeRecommendTool } from '../tools/recipeRecommendTool'
 
 export const recipeAgent = new Agent({
   name: 'Recipe Agent',
@@ -17,7 +17,7 @@ export const recipeAgent = new Agent({
 `,
   model: openai('gpt-4o-mini'),
 
-  tools: { recipeFromFileTool },
+  tools: { recipeRecommendTool },
 
   memory: new Memory({
     storage: new LibSQLStore({
