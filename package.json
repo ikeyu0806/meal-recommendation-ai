@@ -6,7 +6,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "mastra dev",
     "build": "mastra build",
-    "start": "mastra start"
+    "start": "mastra start",
+    "prettier": "prettier --write \"**/*.ts\""
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "@types/node": "^22.15.30",
     "mastra": "^0.10.3",
+    "prettier": "^3.5.3",
     "typescript": "^5.8.3"
   }
 }
